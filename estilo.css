@@ -1,0 +1,717 @@
+/* ************** BARRA DE NAVEGACION ************** */
+* { margin:0; padding: 0;}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color:#BD6E2B;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul a{
+    color:white;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+}
+.logo { width: 200px; }
+.logo-celular {
+  display: none;
+   
+}
+.barra-superior {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+  }
+  .contenedor-central {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-right: 70px;
+    justify-content: flex-end;
+  }
+
+.icono-nav{
+    color: white;
+    font-size: 35px;
+    display: none;
+    align-items: right;
+}
+
+  
+.iconos-derecha {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 10px;
+
+}
+  
+.iconos-derecha a {
+    color: white;
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* ************** PAGINA INICIO ************** */
+
+.slider-celular{
+    display:none;
+}
+
+/* SLIDER */
+.slider-computadora {
+    position: relative; 
+    width: 100vw; 
+    overflow: hidden; 
+  }
+   
+  .slider {
+    display: flex;
+    width: 100%; 
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; 
+  }
+   
+  .slide {
+    flex: 0 0 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+
+    }
+  .img-slide {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+   
+  .indicadores {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .indicadores span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .indicadores .activo {
+    background-color: #333;
+  }
+
+
+/***********/
+
+.cajacontenedoradoble{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.banners{
+    width: 40vw;
+    position: relative;
+    padding: 20px;
+
+}
+.banners img{
+    width:100%;
+    height: auto;
+    display: block;
+}
+
+.boton-banner {
+    font-family: Montserrat;
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(189, 110, 43, 0.8); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.boton-banner:hover {
+    background-color: #a55b22;
+}
+
+.cajacontenedora{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    align-items: stretch;
+    
+
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    width: 20%;
+    border: 1px solid #ddd; 
+    box-shadow: 0px 4px 8px rgba(213, 146, 98, 0.1);
+    border-radius: 10px;
+    overflow: hidden; 
+    background-color: white;
+    text-align: center;
+    padding-bottom: 10px; 
+    
+
+}
+.caja img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.contenido{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+.imgcaja{width: 100%;}
+
+
+.boton-comprar{
+    font-family: Montserrat;
+    display: block;
+    width: 90%;
+    background-color: #BD6E2B;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    border-color: none;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+
+}
+
+
+.boton-comprar:hover {
+    background-color:#a45d24;
+}
+
+
+.bannercontacto{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #BD6E2B;
+    color:white;
+    
+}
+.boton-contacto {
+    font-family: Montserrat;
+    display: block;
+    width: fit-content; 
+    margin: 20px auto 0 auto; 
+    background-color: rgba(10, 66, 248, 0.81); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.boton-contacto:hover {
+    background-color: #6c69c8ac;
+}
+
+.cajainformacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.informacion {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+.imginformacion {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* ************** FOOTER ************** */
+.footer {
+    background-color: #BD6E2B;  
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.fcajafooter{
+    flex: 1;
+    padding: 10px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li a,
+.footer p,
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: normal;  
+    text-align: left;
+    margin-top: 10px;
+    display: block; 
+
+}
+.icono-footer {
+    font-size: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+/* TITULOS */
+h2{
+    font-family:Montserrat;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+h3{
+    font-family:Montserrat;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#BD6E2B;
+}
+h1{
+    font-family:Montserrat;
+    font-size: 22px;
+    margin-top: 10px;
+    text-align: center;
+}
+p{
+    font-family:Montserrat;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+/* ************** PAGINA COCINA ************** */
+
+.bannercocina{width: 100%;}
+.pretexto {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 135px;
+    height :40px;
+    width: 110px;
+}
+
+/* ************** PAGINA BANO ************** */
+.bannerbano{width: 100%;}
+
+
+/* ************** PAGINA CONTACTO ************** */
+.cajacontacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.formulario {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    font-family: Montserrat;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 16px;
+    background-color: #D9D9D9;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.campo-formulario textarea {
+    min-height: 150px;
+}
+
+/* ************** AJUSTES DE PANTALLAS ************** */
+
+@media (max-width: 768px) {
+
+    /* BARRA DE NAVEGACION */
+    nav ul {
+        justify-content: center; 
+    }
+
+    nav ul a {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+    
+    /* FUENTES */
+    h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* BANNERS DOBLES */
+    .banners{
+        padding:5px;
+        width: 45%;
+    }
+    
+    /* CAJA DE PRODUCTOS */
+    .caja {
+        width: 45%; 
+    }
+    /* IMAGENES DE INFORMACION */
+    .informacion {
+        width: 45%;
+    }
+    /* IMAGEN DE FILTRAR */
+    .pretexto{
+        padding-left: 20px;
+        height: 40px;
+        width: 110px;
+    }
+    
+    /* FOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        padding: 20px;
+        gap: 20px;
+      }
+      
+      .cajafooter {
+        width: 100%;
+        text-align: left;
+      }
+      
+      .footer ul li a,
+      .footer p {
+        font-size: 16px;
+      }
+      
+      .footer h3 {
+        font-size: 20px;
+        text-align: left;
+      }
+}
+
+
+@media (max-width: 480px) {
+    /* BANNER PRINCIPAL */
+    .slider-computadora{
+        display: none;
+    }
+    .slider-celular {
+        display: block;
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+      }
+    
+      .slider-celular .slider {
+        display: flex;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+      }
+    
+      .slider-celular .slide {
+        flex: 0 0 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .slider-celular .img-slide {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    
+      .slider-celular .indicadores {
+        text-align: center;
+        margin-top: 10px;
+      }
+    
+    
+
+    /* BARRA DE NAVEGACION */
+    header {
+        justify-content: center;
+        position: relative;
+    }
+    
+
+    /* LOGOS */
+    .logo {
+        display: none;
+      }
+    
+    .logo-celular { /* Cambio de logo */
+        display: block;
+        width: 150px;
+        
+      }
+
+    nav ul a {
+        font-size: 20px;
+    }
+    /* ICONOS */
+    .icono-nav {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .contenedor-central {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 70px;
+      }
+    
+      .iconos-derecha {
+        gap: 10px;
+      }
+    
+
+    /* DISEÑO DE MENU PARA INTERACTUAR */
+    .menu {
+        display: none;
+        background-color: #b56d2e; 
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        text-align: center;
+    }
+    
+    .menu.mostrarmenu {
+        display: block;
+        animation: desplegar 0.3s ease-in-out;
+    }
+    
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 5px;
+        padding: 0;
+    }
+    
+    .menu li {
+        padding: 5px;
+        border-top: 1px solid #d28d4c;
+    }
+    .menu li:first-child {
+        border-top: none;
+    }
+    
+    .menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        text-align: left;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu a:hover {
+        opacity: 0.7;
+    }
+
+    /* FUENTES */ 
+    h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+    /* BANNERS DOBLES */
+    .banners{
+        padding:10px;
+        width: 95%; /* hago que los banners ocupen casi toda la pantalla asi se ponen uno abajo del otro*/
+    
+    }
+   
+    /* CAJA DE PRODUCTOS */ 
+    .caja {
+        width: 45%; /* Cambio a dos cajas de productos en vez de tres*/
+    }
+
+    .boton-comprar {
+        font-size: 14px;
+        padding: 10px;
+        
+    }
+    /* IMAGENES DE INFORMACION */
+
+    .cajainformacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        
+      }
+    
+      .informacion {
+        width: 45%; /* Dos en la primera fila */
+        min-width: unset; /* Anula min-width si es muy grande */
+      }
+    
+      .informacion:nth-child(3) {
+        width: 90%;
+        order: 3;
+      }
+    
+      .imginformacion {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 10px;
+      }
+
+
+    /* IMAGEN DE FILTRAR */
+    .pretexto{
+        padding-left: 20px;
+        height: 35px;
+        width: 100px;
+    }
+    /* FOOTER */ 
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        padding: 20px;
+        gap: 20px;
+      }
+      
+      .cajafooter {
+        width: 100%; /* hago que cada caja ocupe el 100 % asi en vez de tener tres una al lado de la otra, 
+                    tengo 3 una abajo de la otra */ 
+        text-align: left;
+      }
+      
+      .footer ul li a,
+      .footer p {
+        font-size: 16px;
+      }
+      
+      .footer h3 {
+        font-size: 20px;
+        text-align: left;
+      }
+
+    }
+  
