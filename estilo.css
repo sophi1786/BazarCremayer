@@ -1,4 +1,4 @@
-/* ************** BARRA DE NAVEGACION ************** */
+/* ************** BARRA DE LOGO + BUSCADOR + ICONOS  ************** */
 * { margin:0; padding: 0;}
 body {
     font-family: 'Montserrat', sans-serif;
@@ -11,62 +11,104 @@ header{
     align-items: center;
     padding: 10px;
 }
-nav ul{
-    display: flex;
-    list-style: none;
-}
-nav ul a{
-    color:white;
-    text-decoration: none;
-    display: inline-flex;
-    padding: 10px;
-    font-family: Montserrat;
-    font-size: 25px;
-}
+
 .logo { width: 200px; }
 .logo-celular {
-  display: none;
+    display: none;
    
 }
-.barra-superior {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: space-between;
-  }
-  .contenedor-central {
+
+.contenedor-central {
     display: flex;
     align-items: center;
     gap: 20px;
     width: 100%;
     margin-right: 70px;
     justify-content: flex-end;
-  }
-
-.icono-nav{
-    color: white;
-    font-size: 35px;
-    display: none;
-    align-items: right;
 }
 
+.icono-nav{
+    display: none;  
+}
+.buscador-celular {
+    display: none; 
+}
   
+.buscador-computadora {
+    display: flex;
+    max-width: 400px;
+    margin: 0 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 35px;
+}
+
+.buscador-computadora input {
+    border: none;
+    padding-left: 10px;
+    padding-right: 80px;
+    flex: 1;
+    font-family: Montserrat;
+    font-size: 14px;
+    outline: none;
+}
+
+.buscador-computadora button {
+    background-color: white;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
 .iconos-derecha {
     display: flex;
     gap: 15px;
     position: absolute;
-    right: 10px;
+    right: 20px;
 
 }
   
 .iconos-derecha a {
     color: white;
-    font-size: 25px;
+}
+.iconos-derecha a .fa-user {
+    font-size: 26px;
+}
+.iconos-derecha a .fa-shopping-bag {
+    font-size: 24px;
+}
+/* ************** BARRA DE NAVEGACION ABAJO  ************** */
+.menu{
+    color: #ffff;
+    width: 100%;
+    border-top: 1px solid #eee;
+    border-bottom: 2px solid #BD6E2B;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+  
+.menu li a {
+    color:black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.menu li a:hover {
+    color: #BD6E2B;
 }
 
-
-
-
+  
 
 
 /* ************** PAGINA INICIO ************** */
@@ -80,16 +122,16 @@ nav ul a{
     position: relative; 
     width: 100vw; 
     overflow: hidden; 
-  }
+}
    
-  .slider {
+.slider {
     display: flex;
     width: 100%; 
     scroll-snap-type: x mandatory; 
     scroll-behavior: smooth; 
-  }
+}
    
-  .slide {
+.slide {
     flex: 0 0 100vw;
     padding: 0;
     margin: 0;
@@ -98,21 +140,20 @@ nav ul a{
     justify-content: center;
     align-items: center;
     height: auto; 
-
-    }
+}
   .img-slide {
     width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
-  }
+}
    
-  .indicadores {
+.indicadores {
     text-align: center;
     margin-top: 10px;
-  }
+}
   
-  .indicadores span {
+.indicadores span {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -120,14 +161,14 @@ nav ul a{
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
   
-  .indicadores .activo {
+.indicadores .activo {
     background-color: #333;
-  }
+}
 
 
-/***********/
+/***** DOS BANNERS DE COCINA + BAÑO ******/
 
 .cajacontenedoradoble{
     display: flex;
@@ -136,15 +177,16 @@ nav ul a{
 }
 
 .banners{
-    width: 40vw;
+    width: 45vw;
     position: relative;
-    padding: 20px;
+    padding: 10px;
 
 }
 .banners img{
     width:100%;
     height: auto;
     display: block;
+    border-radius: 5px;
 }
 
 .boton-banner {
@@ -168,6 +210,7 @@ nav ul a{
     background-color: #a55b22;
 }
 
+/***** CAJA DE LOS PRODUCTOS ******/
 .cajacontenedora{
     
     display: flex;
@@ -245,7 +288,7 @@ nav ul a{
     background-color:#a45d24;
 }
 
-
+/***** SECCION DE CONTACTO  ******/
 .bannercontacto{
     padding-top: 40px;
     padding-bottom: 40px;
@@ -256,23 +299,25 @@ nav ul a{
 .boton-contacto {
     font-family: Montserrat;
     display: block;
-    width: fit-content; 
-    margin: 20px auto 0 auto; 
-    background-color: rgba(10, 66, 248, 0.81); 
-    color: white;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    background-color: #fff;
+    color: #bd6e2b;
     padding: 10px 20px;
     border: none;
     font-size: 18px;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgb(24 15 8 / 25%);
+    font-weight: bold;
 }
 
 .boton-contacto:hover {
-    background-color: #6c69c8ac;
+    background-color: #faebe0cc;
 }
-
+/***** TRES IMAGENES DE INFORMACION ******/
 .cajainformacion {
     display: flex;
     flex-wrap: wrap;
@@ -432,286 +477,303 @@ p{
 
 @media (max-width: 768px) {
 
-    /* BARRA DE NAVEGACION */
-    nav ul {
-        justify-content: center; 
-    }
+/* BARRA DE NAVEGACION */
+nav ul {
+    justify-content: center; 
+}
 
-    nav ul a {
-        font-size: 18px;
-        padding: 8px;
-    }
+nav ul a {
+    font-size: 18px;
+    padding: 8px;
+}
 
-    .logo {
-        width: 150px;
-    }
-    
-    /* FUENTES */
-    h3 {
-        font-size: 28px;
-        text-align: center;
-    }
+.logo {
+    width: 150px;
+}
 
-    /* BANNERS DOBLES */
-    .banners{
-        padding:5px;
-        width: 45%;
-    }
-    
-    /* CAJA DE PRODUCTOS */
-    .caja {
-        width: 45%; 
-    }
-    /* IMAGENES DE INFORMACION */
-    .informacion {
-        width: 45%;
-    }
-    /* IMAGEN DE FILTRAR */
-    .pretexto{
-        padding-left: 20px;
-        height: 40px;
-        width: 110px;
-    }
-    
-    /* FOOTER */
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; 
-        padding: 20px;
-        gap: 20px;
-      }
-      
-      .cajafooter {
-        width: 100%;
-        text-align: left;
-      }
-      
-      .footer ul li a,
-      .footer p {
-        font-size: 16px;
-      }
-      
-      .footer h3 {
-        font-size: 20px;
-        text-align: left;
-      }
+/* FUENTES */
+h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+/* BANNERS DOBLES */
+.banners{
+    padding:5px;
+    width: 45%;
+}
+
+/* CAJA DE PRODUCTOS */
+.caja {
+    width: 45%; /*hago que entren dos cajas de productos en la pantalla en vez de 4*/
+}
+/* IMAGENES DE INFORMACION */
+.informacion {
+    width: 45%;
+}
+
+
+/* FOOTER */ /*como en el celular, hago que las cajas del footer sean tres una abajo de la otra*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 20px;
+    gap: 20px;
+}
+
+.cajafooter {
+    width: 100%; /*lo ajusto con esto*/
+    text-align: left;
+}
+
+.footer ul li a,
+.footer p {
+    font-size: 16px; /*Le ajusto el tamaño de fuente*/
+}
+
+.footer h3 {
+    font-size: 20px;
+    text-align: left;
+}
 }
 
 
 @media (max-width: 480px) {
-    /* BANNER PRINCIPAL */
-    .slider-computadora{
-        display: none;
-    }
-    .slider-celular {
-        display: block;
-        position: relative;
-        width: 100vw;
-        overflow: hidden;
-      }
-    
-      .slider-celular .slider {
-        display: flex;
-        width: 100%;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-      }
-    
-      .slider-celular .slide {
-        flex: 0 0 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
-      .slider-celular .img-slide {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-    
-      .slider-celular .indicadores {
-        text-align: center;
-        margin-top: 10px;
-      }
-    
-    
 
-    /* BARRA DE NAVEGACION */
-    header {
-        justify-content: center;
-        position: relative;
+/************* BARRA DE NAVEGACION (LOGO + MENU + ICONOS) *************/
+header {
+    justify-content: center;
+    position: relative;
+}
+.buscador-computadora {
+    display: none;
     }
+.menu .buscador-celular {
+    display: flex;
+    width: 90%;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 35px;
+}
     
+.menu .buscador-celular input {
+    flex: 1;
+    border: none;
+    padding: 0 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    outline: none;
+}
 
-    /* LOGOS */
-    .logo {
-        display: none;
-      }
+.menu .buscador-celular button {
+    background-color: white;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+}
+
+/****** LOGO ******/
+
+.logo { /*oculto el logo de computadora*/
+    display: none;
+}
+
+.logo-celular { /* Cambio de logo */
+    display: block;
+    width: 150px;
+}
+
+nav ul a {
+    font-size: 20px;
+}
+/****** ICONOS ******/
+.icono-nav {
+    color: white;
+    font-size: 35px;
+    align-items: right;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contenedor-central {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.iconos-derecha {
+    gap: 10px;
+    right: 10px;
+}
+
+/******  MENU QUE SE DESPLIEGA  ******/
+.menu {
+    display: none;
+    background-color: #b56d2e;
+    padding: 15px 0 10px;
+    position: fixed; 
+    top: 100px; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu.mostrarmenu {
+    display: block;
+    animation: desplegar 0.3s ease-in-out;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.menu li {
+    padding: 5px;
+    border-top: 1px solid #d28d4c;
+}
+.menu li a{
+    color:white;
+}
+.menu li:first-child {
+    border-top: none;
+}
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    text-align: left;
+    transition: opacity 0.3s ease;
+}
+.menu a:hover {
+    opacity: 0.7;
+}
+
+/****** BANNER PRINCIPAL (SLIDER)  ******/
+.slider-computadora{ /*oculto el slider de computadora*/
+    display: none;
+}
+.slider-celular {  /*muestro el slider de celular*/
+    display: block;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+.slider-celular .slider {
+    display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider-celular .slide {
+    flex: 0 0 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-celular .img-slide {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.slider-celular .indicadores {  /*ajusto los puntitos para el celular*/
+    text-align: center;
+    margin-top: 10px;
+}
+
+/****** BANNERS DOBLES (COCINA Y BAÑO) ******/
+.banners{
+    padding:10px;
+    width: 95%; /* hago que los banners ocupen casi toda la pantalla asi se ponen uno abajo del otro*/
+
+}
+
+/****** CAJA DE PRODUCTOS ******/ 
+.caja {
+    width: 45%; /* Cambio a dos cajas de productos en vez de tres*/
+}
+
+.boton-comprar {
+    font-size: 14px;
+    padding: 10px;
     
-    .logo-celular { /* Cambio de logo */
-        display: block;
-        width: 150px;
-        
-      }
+}
 
-    nav ul a {
-        font-size: 20px;
-    }
-    /* ICONOS */
-    .icono-nav {
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .contenedor-central {
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 10px;
-        margin-left: 70px;
-      }
+/****** TRES IMAGENES DE INFORMACION ******/
+
+.cajainformacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;    
+}
+
+.informacion {
+    width: 45%; /* Dos en la primera fila */
+    min-width: unset; 
+}
+
+.informacion:nth-child(3) { /* La tercera imagen queda debajo */
+    width: 60%;
+    order: 3;
+}
+
+.imginformacion { 
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 10px;
+}
+
+
+/* FOOTER */ 
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 20px;
+    gap: 20px;
+}
     
-      .iconos-derecha {
-        gap: 10px;
-      }
+.cajafooter {
+    width: 100%; /* hago que cada caja ocupe el 100 % asi en vez de tener tres una al lado de la otra, 
+                tengo 3 una abajo de la otra */ 
+    text-align: left;
+}
     
+.footer ul li a,
+.footer p {
+    font-size: 16px;
+}
 
-    /* DISEÑO DE MENU PARA INTERACTUAR */
-    .menu {
-        display: none;
-        background-color: #b56d2e; 
-        padding: 10px 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        text-align: center;
-    }
-    
-    .menu.mostrarmenu {
-        display: block;
-        animation: desplegar 0.3s ease-in-out;
-    }
-    
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin: 5px;
-        padding: 0;
-    }
-    
-    .menu li {
-        padding: 5px;
-        border-top: 1px solid #d28d4c;
-    }
-    .menu li:first-child {
-        border-top: none;
-    }
-    
-    .menu a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-        font-size: 18px;
-        text-align: left;
-        transition: opacity 0.3s ease;
-    }
+.footer h3 {
+    font-size: 20px;
+    text-align: left;
+}
+/******  FUENTES ******/ 
+h3 {
+    font-size: 25px;
+    text-align: center;
+}
 
-    .menu a:hover {
-        opacity: 0.7;
-    }
-
-    /* FUENTES */ 
-    h3 {
-        font-size: 25px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-
-    /* BANNERS DOBLES */
-    .banners{
-        padding:10px;
-        width: 95%; /* hago que los banners ocupen casi toda la pantalla asi se ponen uno abajo del otro*/
-    
-    }
-   
-    /* CAJA DE PRODUCTOS */ 
-    .caja {
-        width: 45%; /* Cambio a dos cajas de productos en vez de tres*/
-    }
-
-    .boton-comprar {
-        font-size: 14px;
-        padding: 10px;
-        
-    }
-    /* IMAGENES DE INFORMACION */
-
-    .cajainformacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        
-      }
-    
-      .informacion {
-        width: 45%; /* Dos en la primera fila */
-        min-width: unset; /* Anula min-width si es muy grande */
-      }
-    
-      .informacion:nth-child(3) {
-        width: 90%;
-        order: 3;
-      }
-    
-      .imginformacion {
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto 10px;
-      }
-
-
-    /* IMAGEN DE FILTRAR */
-    .pretexto{
-        padding-left: 20px;
-        height: 35px;
-        width: 100px;
-    }
-    /* FOOTER */ 
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; 
-        padding: 20px;
-        gap: 20px;
-      }
-      
-      .cajafooter {
-        width: 100%; /* hago que cada caja ocupe el 100 % asi en vez de tener tres una al lado de la otra, 
-                    tengo 3 una abajo de la otra */ 
-        text-align: left;
-      }
-      
-      .footer ul li a,
-      .footer p {
-        font-size: 16px;
-      }
-      
-      .footer h3 {
-        font-size: 20px;
-        text-align: left;
-      }
-
-    }
+h1 {
+    font-size: 18px;
+    text-align: center;
+}
+}
   
