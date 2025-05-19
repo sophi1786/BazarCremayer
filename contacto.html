@@ -77,6 +77,14 @@
         </div>
     </div>
 
+    <div id="mensaje-exito" class="mensaje">
+      <div class="mensaje-contenido">
+        <span class="cerrar" onclick="cerrarMensaje()">&times;</span>
+        <p>¡Gracias por tu consulta! Te responderemos pronto.</p>
+      </div>
+    </div>
+    
+
 </main>
 <footer class="footer">
     <div class="cajafooter">
@@ -116,8 +124,29 @@
       x.classList.toggle("mostrarmenu");
       }
    
-  </script> 
-  
+      
+    // Mostrar mensaje al enviar formulario
+    document.querySelector('.formulario form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensaje-exito').style.display = 'flex';
+      this.reset(); // limpia 
+    });
+
+    // Función para cerrar el mensaje
+    function cerrarMensaje() {
+      document.getElementById('mensaje-exito').style.display = 'none';
+    }
+
+    // Cierra el mensaje si se hace clic fuera del contenido
+    window.onclick = function(event) {
+      var mensaje = document.getElementById('mensaje-exito');
+      if (event.target == mensaje) {
+        mensaje.style.display = "none";
+      }
+  }
+
+
+</script>
 </body>
 </html>
  
