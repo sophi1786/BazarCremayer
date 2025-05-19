@@ -804,6 +804,9 @@ main.main-contacto {
     width: 300px;
     height: 600px;
   }
+main.contenedor{
+    margin-top: 0px;
+}
 
 /* FOOTER */ 
 .footer {
