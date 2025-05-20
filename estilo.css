@@ -340,16 +340,17 @@ header{
     margin-bottom: 15px;
 }
 /* ************** ANUNCIO ************** */
-.contenedor {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.anuncio-externo{
+    width:726px;
+    height:90px;
+    border:none;
+    display:block;
+    margin:0 auto;
   }
-
-  .marcoanuncio {
-    width: 728px;
-    height: 90px;
-    border: none;
+  .contenedor-anuncio-externo{
+    display:flex;
+    justify-content:center;
+    padding:30px 0;
   }
 /* ************** FOOTER ************** */
 .footer {
@@ -800,13 +801,12 @@ main.main-contacto {
     margin: 0 auto 10px;
 }
 /* anuncio */ 
-.marcoanuncio {
-    width: 300px;
-    height: 600px;
+
+
+.anuncio-externo{
+    width:300px;
+    height:600px;
   }
-main.contenedor{
-    margin-top: 0px;
-}
 
 /* FOOTER */ 
 .footer {
