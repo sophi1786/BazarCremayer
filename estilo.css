@@ -341,7 +341,7 @@ header{
 }
 /* ************** ANUNCIO ************** */
 .anuncio-externo{
-    width:728px;
+    width:729px; /* solo funciona el anuncio que me pasaron si 729, en 728 se ve cortado*/
     height:90px;
     border:none;
     display:block;
