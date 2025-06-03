@@ -341,7 +341,7 @@ header{
 }
 /* ************** ANUNCIO ************** */
 .anuncio-externo{
-    width:729px; /* solo funciona el anuncio que me pasaron si 729, en 728 se ve cortado*/
+    width:729px; /* solo funciona el anuncio de jose con esta medida >728*/
     height:90px;
     border:none;
     display:block;
@@ -498,7 +498,7 @@ p{
   }
   
   /* Contenido del mensaje */
-  .mensaje-contenido {
+.mensaje-contenido {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -510,7 +510,7 @@ p{
   }
   
   /* Botón para cerrar */
-  .cerrar {
+.cerrar {
     color: #aaa;
     float: right;
     font-size: 24px;
@@ -520,7 +520,47 @@ p{
   .cerrar:hover {
     color: black;
   }
+/* ************** PAGINA NOSOTROS ************** */
 
+.texto-historia {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+  
+.example-image {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-sola-grande { /* Contenedor de imagen final GRANDE */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+  
+.imagen-sola-grande .example-image {
+    width: 950px;
+    height: auto;
+}
+  
+  
+  
 /* ************** AJUSTES DE PANTALLAS ************** */
 
 @media (max-width: 768px) {
@@ -584,6 +624,35 @@ h3 {
     font-size: 20px;
     text-align: left;
 }
+
+/* PAGINA NOSOTROS GALERIAS */
+.galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.galeria a.example-image-link {
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.example-image {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+  
+.imagen-sola-grande {
+    text-align: center; 
+}
+  
+.imagen-sola-grande .example-image {
+    width: 90%;
+}
+
 }
 
 
