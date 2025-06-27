@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Presentación Bazar Cremayer</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html, body { height: 100%; }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    .espaciador-nav {
+      height: 60px;
+    }
+
+    .navegador {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color:#B27239;
+      color: white;
+      text-align: center;
+      z-index: 1000;
+    }
+    .navegador ul{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-flow: wrap;
+    }
+
+    .navegador ul li{
+      padding: 20px;
+     
+    }
+    .navegador ul li a{
+      text-decoration: none;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+        
+    .navegador ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 5px;
+    }
+
+    
+    .navegador ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+
+    .navegador ul li a:hover::after {
+      width: 100%;
+    }
+
+    .icono-nav {
+      display: none;
+      font-size: 30px;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      color: white;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      
+      padding: 60px 20px 20px;
+    }
+
+    .titulo {
+      font-size: 3em;
+      margin-bottom: 30px;
+      align-self: flex-start; 
+      align-items: flex-start;
+      color: #B27239;
+    }
+
+    .botones {
+      margin-top: auto;
+      margin-bottom: 30px;
+    }
+
+    .botones button {
+      margin: 0 5px;
+      padding: 10px 15px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color:white;
+      margin-top: 100px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 2em;
+      color:white;
+    }
+
+    p {
+      font-size: 1em;
+      color:white;
+    }
+
+    /************************* SLIDE 0 ***************************************/
+    #s0 { 
+      background-color: #B27239;
+      justify-content: center;
+      align-items: center;
+    } 
+    
+    .logo{
+      
+      width: 550px;
+    }
+    /************************* SLIDE 1 ***************************************/
+    #s1 { 
+      background-color: #faf1e9;
+      padding: 80px 40px;
+      height: auto;
+    }
+    .local{
+      width:100%;
+      max-width: 600px;
+      display: block;
+      margin:0 auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    }
+    .contenedor-s1{
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+    .mitad{
+      width:48%;
+    }
+    .texto-intro h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 25px;
+      color: black;
+      color: #B27239;
+    }
+
+    .texto-intro p {   
+      margin-bottom: 15px;
+      color: black;
+      line-height: 1.5;
+      font-size: 20px;
+    }
+    #s1 .titulo{
+      margin-bottom: 80px;
+    }
+    /************************* SLIDE 2 ***************************************/
+    #s2 { 
+      background-color: #faf1e9;
+      height: auto;
+      padding: 80px 40px;
+     }
+
+    .contenedor-s2 {
+      display: flex;
+      flex-direction: column; 
+      gap: 40px;             
+      align-items: center;   
+    }
+    .contenedor-s2 h3{
+      color: #B27239;
+      font-size: 1.8em;
+      padding-bottom: 40px;
+    }
+
+    .arquitectura-img {
+      text-align: center;
+      width: 100%;
+      padding-top: 80px;
+    }
+
+    .imagenarquitectura1 {
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    
+    .arquitectura-slider {
+      width: 100%;
+      max-width: 1000px;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden; 
+    }
+
+    
+    .arquitectura-slider input[type="radio"] {
+      display: none;
+    }
+
+    
+    .slides {
+      display: flex;
+      width: 200%; 
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+      width: 50%;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .imagenarquitectura {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+      height: auto;
+      display: block;
+    }
+
+    .navegacion-slider {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .navegacion-slider label {
+      cursor: pointer;
+      padding: 8px 12px;
+      background-color: #B27239;
+      margin: 0 5px;
+      border-radius: 20px;
+      transition: background 0.3s;
+      color: white;
+      min-width: 40px;
+      display: inline-block;
+    }
+
+    .navegacion-slider label:hover {
+      background-color: #CC9A62;
+    }
+
+    #slide1:checked ~ .slider-contenido .slides {
+    transform: translateX(0%);
+    }
+
+    #slide2:checked ~ .slider-contenido .slides {
+      transform: translateX(-50%);
+    }
+
+    .slider-contenido {
+      padding-bottom: 40px;
+    }
+    .slide {
+      min-height: 400px; 
+      padding: 20px;
+    }
+
+    /************************* SLIDE 3 ***************************************/
+    #s3 { 
+      background-color: #faf1e9;
+      padding: 80px 40px;
+      height: auto;
+    }
+    .intro-diseño {
+      text-align: justify;
+      max-width: 1280px; 
+      margin: 20px auto 40px;
+      font-size: 1.1em;
+      color: black;
+      padding: 80px 20px; 
+      padding-top: 80px;
+    }
+
+    .contenedor-s3{
+      display: flex;
+      justify-content: space-between ;
+      flex-flow: wrap;
+      align-content: center;
+      gap: 40px;
+    }
+    .mitad-s3{
+      width: 48%;
+      align-content: center;
+    }
+    .imgs3{
+      width: 100%;
+      padding: 0 60px;
+    }
+    
+    
+    /************************* SLIDE 4 ***************************************/
+    #s4 {
+      background-color: #faf1e9;
+      padding: 80px 40px;
+      height: auto; 
+    }
+
+    .intro-adaptaciones {
+      text-align: justify;
+      max-width: 1280px; 
+      margin: 20px auto 40px;
+      font-size: 1.1em;
+      color: black;
+      padding: 0 20px; 
+      padding-top: 80px;
+    }
+
+    #iframes-adaptaciones,
+    .iframes-adaptaciones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .device-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .device-frame h4 {
+      margin-bottom: 10px;
+      color: #B27239;
+    }
+
+    .device-frame iframe {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .mockups{
+      display: none;
+    }
+
+    
+    /************************* SLIDE 4-bannermockups ***************************************/
+    #s4-banner {
+      background-color: #faf1e9;
+      height: 70vh;
+      padding: 0;
+    }
+    .bannermockups{
+      width:100%;
+    }
+    /************************* SLIDE 5 ***************************************/
+    #s5 {
+      background-color: #faf1e9;
+      padding: 80px 40px;
+    }
+    .presupuesto-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      padding-top: 100px;
+    }
+
+    .bloque-presupuesto {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 48%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bloque-presupuesto h3 {
+      color: #B27239;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .bloque-presupuesto ul {
+      
+      padding-left: 20px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .bloque-presupuesto li {
+      margin-bottom: 8px;
+    }
+    /************************* SLIDE 6 ***************************************/
+    #s6 {
+      background-color: #faf1e9;
+      padding: 100px 20px;
+      text-align: center;
+
+    }
+    .contenedor-s6{
+      padding: 200px 0;
+    }
+    .contenedor-s6 p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .boton-sitio {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #B27239;
+      color: white;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    
+  
+  /************************* PANTALLA TABLET y reducidas por iframe ***************************************/
+    @media (min-width: 481px) and (max-width: 1065px) {
+
+    /* NAVBAR */
+    .navegador ul li{
+      padding: 20px;
+      font-size: 12px;
+     
+    }
+    .espaciador-nav {
+      height: 50px;
+    }
+    
+
+    /* TITULOS */
+    .titulo {
+      font-size: 2.4em;
+      text-align: center;
+      align-self: center;
+    }
+
+    /* DIAPO 0 */
+    h1 {
+      font-size: 2.2em;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    p {
+      font-size: 1em;
+      text-align: center;
+    }
+
+    .logo {
+      width: 60%;
+      max-width: 350px;
+      margin: 50px auto;
+      display: block;
+    }
+
+    /* DIAPO 1: INTRODUCCIÓN */
+    .contenedor-s1 {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .mitad {
+      width: 100%;
+    }
+
+    .texto-intro h3 {
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .texto-intro p {
+      font-size: 12px;
+      text-align: justify;
+    }
+
+    .local {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* DIAPO 2: ARQUITECTURA */
+    .imagenarquitectura1 {
+      max-width: 100%;
+    }
+
+    .arquitectura-slider {
+      max-width: 100%;
+    }
+
+    .slide {
+      min-height: auto;
+      padding: 0 10px;
+    }
+
+    /* DIAPO 3: DISEÑO */
+    .contenedor-s3 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mitad-s3 {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .imgs3 {
+      width: 100%;
+      max-width: 600px;
+    }
+    .intro-diseño{
+      font-size: 14px;
+      padding-top: 0;
+      text-align: justify;
+    }
+
+    /* DIAPO 4: ADAPTACIONES */
+    .intro-adaptaciones {
+      font-size: 14px;
+      text-align: justify;
+      padding-top: 0;
+    }
+
+
+    .iframes-adaptaciones {
+     display: none;
+    }
+    .intro-adaptaciones{
+      text-align: justify;
+      font-size: 14px;
+      margin:0;
+      padding: 50px 10px;
+    }
+
+    .mockups{
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+    }
+
+    .img-mockup {
+        width: 50%;
+        padding: 30px 20px;
+    }
+
+    /* DIAPO 5: PRESUPUESTO */
+    .presupuesto-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    
+    .bloque-presupuesto h3{
+      font-size: 14px;
+    }
+    .bloque-presupuesto li{
+      font-size: 12px;
+    }
+
+
+    /* DIAPO 6: SITIO */
+    .boton-sitio {
+      font-size: 1.1em;
+      padding: 12px 24px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      height: auto !important;
+    }
+    .contenedor-s6 p {
+      font-size: 16px;
+    }
+  }
+  /************************* PANTALLA CELULAR ***************************************/
+    @media (max-width: 480px) {
+
+    /* NAV RESPONSIVE */
+
+    .espaciador-nav {
+      display: none;
+    }
+
+    .navegador {
+      background-color: rgba(178, 114, 57, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navegador ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navegador.mostrarmenu ul {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      background-color: rgba(178, 114, 57, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .navegador ul li {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #fff;
+      padding: 14px;
+    }
+
+    .navegador ul li a {
+      color: white;
+      font-size: 1.1em;
+      text-decoration: none;
+      padding: 12px 0;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .navegador ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .icono-nav {
+      display: block;
+      font-size: 30px;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      color: white;
+      z-index: 1001;
+      cursor: pointer;
+      background-color: #b27239e0; /* fondo oscuro semiopaco */
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s;
+    }
+
+    .icono-nav:hover {
+      background-color: #b27239e0;
+    }
+
+    .titulo {
+      font-size: 2em;
+      text-align: center;
+      align-self:center;
+    }
+
+    /* DIAPO 0 */
+    h1 {
+      font-size: 35px;
+      text-align: center;
+      margin-top: 50px;
+      padding: 5px;
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-size: 15px;
+      text-align: center;
+    }
+    .bloque {
+      display: block;
+      text-align: center;
+      margin: 6px 0;
+    }
+
+    .logo {
+      width: 80%;
+      max-width: 300px;
+      margin: 50px auto;
+      display: block;
+      
+    }
+
+    /* DIAPO 1: INTRODUCCIÓN */
+    #s1,#s2,#s3,#s4,#s5,#s6{
+      padding: 50px 20px;
+    }
+    #s4-banner{
+      padding: 0;
+    }
+    .contenedor-s1 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #s1 .titulo{
+      text-align: center;
+    }
+
+    .mitad {
+      width: 100%;
+    }
+
+    .texto-intro h3 {
+      font-size: 14px;
+    }
+
+    .texto-intro p {
+      font-size: 12px;
+      text-align: justify;
+    }
+
+    .local {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    /* DIAPO 2: ARQUITECTURA */
+
+    .contenedor-s2 h3 {
+      font-size: 20px;
+    }
+    .imagenarquitectura1 {
+      max-width: 100%;
+    }
+
+    .arquitectura-slider {
+      max-width: 100%;
+    }
+
+    .slide {
+      min-height: auto;
+      padding: 0;
+      padding-bottom: 15px;
+    }
+
+    .device-frame iframe {
+      width: 100%;
+      max-width: 360px;
+      height: 600px;
+    }
+
+
+
+    /* DIAPO 3: DISEÑO */
+    .contenedor-s3 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mitad-s3 {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .imgs3 {
+      max-width: 100%;
+      padding: 0;
+    }
+    .intro-diseño{
+      text-align: justify;
+      font-size: 14px;
+      margin:0;
+      padding: 50px 10px;
+      
+    }
+
+    /* DIAPO 4: ADAPTACIONES */
+    .iframes-adaptaciones {
+     display: none;
+    }
+    .intro-adaptaciones{
+      text-align: justify;
+      font-size: 14px;
+      margin:0;
+      padding: 50px 10px;
+      
+    }
+
+    .mockups{
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+    }
+
+    .img-mockup{
+      width: 100%;
+      padding: 30px 0;
+      
+    }
+
+    /* DIAPO 4-BANNER */
+    .bannermockups {
+      width: 100%;
+    }
+
+    /* DIAPO 5: PRESUPUESTO */
+    .presupuesto-container {
+      flex-direction: column; 
+      align-items: center;
+      padding-top: 30px;
+    }
+
+    .bloque-presupuesto {
+      width: 100%; 
+      max-width: 100%;
+    }
+
+    .bloque-presupuesto h3{
+      font-size: 16px;
+    }
+    .bloque-presupuesto li{
+      font-size: 12px;
+    }
+
+    /* DIAPO 6: SITIOWEB */
+    .boton-sitio:hover {
+      background-color: #995a2e;
+      transform: scale(1.05);
+    }
+
+
+    /* SLIDES EN GENERAL */
+    section {
+      height: auto !important;
+      padding: 60px 10px;
+      padding-top: 120px;
+    }
+
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navegador" id="navegador">
+    <ul>
+      <li><a href="#s0">Inicio</a></li>
+      <li><a href="#s1">Introducción</a></li>
+      <li><a href="#s2">Arquitectura</a></li>
+      <li><a href="#s3">Diseño</a></li>
+      <li><a href="#s4">Adaptaciones</a></li>
+      <li><a href="#s5">Presupuesto</a></li>
+      <li><a href="#s6">Ver sitio</a></li>
+    </ul>
+  </nav>
+
+  <a href="javascript:void(0);" class="icono-nav" onclick="MiFuncion()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </a>
+
+  <div class="espaciador-nav"></div>
+
+  <section id="s0">
+    
+    <a href="https://sophi1786.github.io/BazarCremayer/index.html"><img class="logo" src="imagenes/logo.png" alt="Logo-Bazar-Cremayer"></a>
+    <h1> Presentación: Mi sitio web</h1>
+    <p>
+      <span class="bloque">Sophia Busada</span>
+      <span class="bloque">– Cátedra Wenceslao –</span>
+      <span class="bloque">S1 2025</span>
+    </p>
+    
+  </section>
+
+  <section id="s1">
+    <div class="titulo">01. Introducción</div>
+    <div class="contenedor-s1">
+      
+      <div class="mitad texto-intro">
+        <h3>¿De qué trata?</h3>
+        <p>Bazar Cremayer es un negocio familiar que se dedica a la venta de artículos para la cocina, el baño y la casa.</p>
+  
+        <h3>Público Objetivo</h3>
+        <p>El sitio web está dirigido a personas que estén equipando su primera casa, y a apasionados por los artículos de cocina.</p>
+  
+        <h3>Objetivo</h3>
+        <p>La principal finalidad del sitio web sería el e-commerce, ofreciendo una tienda online accesible y bien organizada para mostrar la amplia variedad de productos.</p>
+      </div>
+
+      <div class="mitad">
+        <img class="local" src="imagenes/localabierto-chica.png" alt="Foto-del-local">
+      </div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="titulo">02. Arquitectura</div>
+
+    <div class="contenedor-s2">
+
+      <div class="arquitectura-img">
+        <h3>Mapa de sitio</h3>
+        <img class="imagenarquitectura1" src="imagenes/mapadesitio.png" alt="Mapa-de-sitio">
+      </div>
+
+
+      <div class="arquitectura-slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+      
+        <div class="slider-contenido">
+          <div class="slides">
+            <div class="slide s1">
+              <h3>Wireframe de computadora</h3>
+              <img class="imagenarquitectura" src="imagenes/Wireframe-desktop.png">
+            </div>
+            <div class="slide s2">
+              <h3>Wireframe de celular</h3>
+              <img class="imagenarquitectura" src="imagenes/Wireframe-mobile.png">
+            </div>
+          </div>
+      
+          <div class="navegacion-slider">
+            <label for="slide1">1</label>
+            <label for="slide2">2</label>
+          </div>
+        </div>
+      </div>
+    
+
+
+    
+  </section>
+
+  <section id="s3">
+    <div class="titulo">03. Diseño</div>
+    <p class="intro-diseño"> 
+        El diseño del sitio utiliza una paleta de colores sencilla, donde predominan el <b>blanco</b> y un tono <b>caramelo/bronce</b> que aportan calidez y claridad.
+        La tipografía elegida es <b>Montserrat</b> en sus versiones semibold y bold, una fuente moderna, versátil y fácil de leer, dando un tono profesional al sitio web. 
+    </p>
+    <div class="contenedor-s3">
+      <div class="mitad-s3">
+        <img class="imgs3" src="imagenes/Paletadecolor.png" alt="Paleta-de-colores">
+      </div>
+      <div class="mitad-s3">
+        <img  class="imgs3" src="imagenes/Tipografia.png" alt="Tipografia">
+      </div>
+
+    </div>
+    
+  </section>
+
+  <section id="s4">
+    <div class="titulo">04. Adaptaciones</div>
+    <p class="intro-adaptaciones">
+        El sitio fue diseñado para adaptarse a distintos dispositivos usando Flexbox y media queries.
+        <b>En desktop se muestra en columnas, mientras que en mobile se reorganizan los elementos verticalmente.</b>
+        También se ajustan tamaños de texto e imágenes para mejorar la experiencia en cada pantalla.
+    </p>
+  
+    <div class="iframes-adaptaciones">
+  
+      <div class="device-frame">
+        <h4>Versión Desktop</h4>
+        <iframe src="https://sophi1786.github.io/BazarCremayer/index.html" width="1000" height="720"></iframe>
+      </div>
+  
+      <div class="device-frame">
+        <h4>Versión Tablet</h4>
+        <iframe src="https://sophi1786.github.io/BazarCremayer/index.html" width="768" height="670"></iframe>
+      </div>
+  
+      <div class="device-frame">
+        <h4>Versión Mobile</h4>
+        <iframe src="https://sophi1786.github.io/BazarCremayer/index.html" width="375" height="670"></iframe>
+      </div>
+  
+    </div>
+
+    <div class="mockups">
+      <img class="img-mockup" src="imagenes/Mockup-computadora.jpeg" alt="Mockup-computadora">
+      <img class="img-mockup" src="imagenes/Mockup-tablet.jpeg" alt="Mockup-tablet">
+      <img class="img-mockup" src="imagenes/Mockup-celular.jpeg" alt="Mockup-celular">
+    </div>
+
+   
+  </section>
+    
+ <section id="s4-banner">
+  <div>
+    <img class="bannermockups" src="imagenes/bannermockups.png" alt="Banner-Mockups">
+  </div>
+ </section>
+
+  <section id="s5">
+    <div class="titulo">05. Presupuesto</div>
+    <div class="presupuesto-container">
+    
+      <div class="bloque-presupuesto">
+        <h3>1. Diseño de Información – $200.000</h3>
+        <ul>
+          <li>Investigación y planificación: $80.000</li>
+          <li>Mapeo del sitio y wireframes: $70.000</li>
+          <li>Redacción de contenido (SEO): $50.000</li>
+        </ul>
+      </div>
+  
+      <div class="bloque-presupuesto">
+        <h3>2. Diseño Visual – $300.000</h3>
+        <ul>
+          <li>Identidad visual (logo, paleta, tipografía): $150.000</li>
+          <li>Prototipado: $50.000</li>
+          <li>Diseño responsivo: $100.000</li>
+        </ul>
+      </div>
+  
+      <div class="bloque-presupuesto">
+        <h3>3. Desarrollo Web – $450.000</h3>
+        <ul>
+          <li>Maquetación HTML y CSS: $350.000</li>
+          <li>Integración de JavaScript: $60.000</li>
+          <li>Optimización técnica y SEO: $40.000</li>
+        </ul>
+      </div>
+  
+      <div class="bloque-presupuesto">
+        <h3>4. Hosting y Dominio – $40.000 aprox.</h3>
+        <ul>
+          <li>Dominio (GoDaddy): USD 13 + USD 12 (proteccion) ≈ $26.000 anual </li>
+          <li>Hosting (Towebs): $7999 o $483 (durante los primeros 6 meses) = $50.900 anual</li>
+        </ul>
+      </div>
+  
+    </div>
+   
+  </section>
+
+  <section id="s6">
+    <div class="titulo">06. Sitio navegable</div>
+    <div class="contenedor-s6">
+      <p>¡Gracias por recorrer el proyecto! Podés visitar el sitio completo haciendo clic en el siguiente botón:</p>
+      <a href="https://sophi1786.github.io/BazarCremayer/index.html" target="_blank" class="boton-sitio">Visitar Sitio Web</a>
+    </div>
+    
+  </section>
+
+  <script>
+    function MiFuncion() {
+      var x = document.getElementById("navegador");
+      x.classList.toggle("mostrarmenu");
+    }
+
+    // Para cerrar el menu 
+    document.querySelectorAll(".navegador ul li a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navegador").classList.remove("mostrarmenu");
+      });
+    });
+  </script>
+
+</body>
+</html>
