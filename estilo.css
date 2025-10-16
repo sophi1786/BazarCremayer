@@ -510,41 +510,113 @@ p{
 .campo-formulario textarea {
     min-height: 150px;
 }
+/* --- MENSAJE DE ÉXITO --- */
+
 .mensaje {
-    display: none; 
-    position: fixed; 
-    z-index: 9999; 
-    left: 0;
+    display: none; /* Oculto por defecto */
+    position: fixed;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.5); 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Fondo difuminado */
+    backdrop-filter: blur(4px);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.4s ease forwards;
   }
   
-  /* Contenido del mensaje */
-.mensaje-contenido {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
+  /* Caja del mensaje */
+  .mensaje-contenido {
+    background-color: #fffaf5;
+    border: 2px solid #BD6E2B;
+    border-radius: 14px;
     text-align: center;
-    max-width: 400px;
-    width: 80%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 40px 30px;
+    max-width: 420px;
+    width: 85%;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: popIn 0.5s ease;
+    position: relative;
   }
   
-  /* Botón para cerrar */
-.cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
+  /* Botón de cerrar */
+  .cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: #BD6E2B;
+    font-size: 26px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
   }
   .cerrar:hover {
-    color: black;
+    color: #a94f1d;
+    transform: scale(1.1);
+  }
+  
+  /* Texto del mensaje */
+  .mensaje-contenido p {
+    color: #3d2e25;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Ícono decorativo */
+  .mensaje-contenido::before {
+    content: "✓";
+    display: block;
+    font-size: 45px;
+    color: #BD6E2B;
+    margin-bottom: 10px;
+    animation: aparecerIcono 0.5s ease;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes aparecerIcono {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .mensaje-contenido {
+      padding: 30px 20px;
+      font-size: 15px;
+    }
+  
+    .cerrar {
+      top: 8px;
+      right: 12px;
+      font-size: 22px;
+    }
   }
 /* ************** PAGINA NOSOTROS ************** */
 
