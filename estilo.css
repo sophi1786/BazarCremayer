@@ -801,6 +801,7 @@ header {
 .logo-celular { /* Cambio de logo */
     display: block;
     width: 150px;
+    margin-right: 30px;
 }
 
 nav ul a {
